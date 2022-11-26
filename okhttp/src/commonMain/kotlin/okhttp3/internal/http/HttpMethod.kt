@@ -29,7 +29,7 @@ object HttpMethod {
     method == "REPORT")
 
   @JvmStatic // Despite being 'internal', this method is called by popular 3rd party SDKs.
-  fun permitsRequestBody(method: String): Boolean = !(method == "GET" || method == "HEAD")
+  fun permitsRequestBody(method: String): Boolean = true
 
   fun redirectsWithBody(method: String): Boolean = method == "PROPFIND"
 
